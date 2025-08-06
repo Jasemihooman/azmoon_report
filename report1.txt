@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گزارش عملکرد ۲۰ روزه - آکادمی آزمون</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+        .flow-step:not(:last-child)::after {
+            content: '←';
+            position: absolute;
+            left: -20px;
+            top: 30%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #A3DFFF;
+        }
+        @media (max-width: 767px) {
+           .flow-step:not(:last-child)::after {
+                content: '↓';
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+           }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#004AAD]">گزارش عملکرد ۲۰ روزه آکادمی آزمون</h1>
+            <p class="text-lg text-gray-600 mt-4">نمایش دستاوردهای کلیدی فاز اول پروژه و پتانسیل رشد برای جذب سرمایه</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="kpi-card border-t-4 border-[#009FFD]">
+                <div class="text-5xl font-extrabold text-[#004AAD]">22</div>
+                <h3 class="text-xl font-bold mt-2">لید واجد شرایط</h3>
+                <p class="text-gray-500 mt-1">جذب شده از طریق کمپین‌های هدفمند</p>
+            </div>
+            <div class="kpi-card border-t-4 border-[#24CCFF]">
+                <div class="text-5xl font-extrabold text-[#004AAD]">8%</div>
+                <h3 class="text-xl font-bold mt-2">نرخ تبدیل کلیک به لید</h3>
+                <p class="text-gray-500 mt-1">نرخ تبدیل اولیه امیدوارکننده</p>
+            </div>
+            <div class="kpi-card border-t-4 border-[#A3DFFF]">
+                <div class="text-5xl font-extrabold text-[#004AAD]">83<span class="text-3xl">/100</span></div>
+                <h3 class="text-xl font-bold mt-2">امتیاز عملکرد</h3>
+                <p class="text-gray-500 mt-1">ارزیابی جامع بر اساس شاخص‌های کلیدی</p>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-[#004AAD]">عملکرد کمپین تبلیغات دیجیتال</h2>
+                <p class="text-gray-600 mb-6">در فاز اول، کمپین با بودجه‌ای محدود اجرا شد تا قیف فروش اولیه شکل گرفته و داده‌های لازم برای بهینه‌سازی جمع‌آوری شود. نتایج، اثربخشی بالای استراتژی را نشان می‌دهد.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-4 rtl:space-x-reverse">
+                    <div class="flow-step">
+                        <div class="text-4xl font-bold text-[#009FFD]">42,000</div>
+                        <div class="font-semibold mt-2">بازدید (Impression)</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="text-4xl font-bold text-[#009FFD]">494</div>
+                        <div class="font-semibold mt-2">کلیک (CTR: 1.18%)</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="text-4xl font-bold text-[#009FFD]">22</div>
+                        <div class="font-semibold mt-2">لید (نرخ تبدیل: 8%)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-[#004AAD]">وضعیت بودجه تبلیغات</h2>
+                <p class="text-gray-600 mb-6">مدیریت بودجه به صورت هوشمند و مرحله‌ای انجام شده است. بخش عمده بودجه برای فازهای بعدی و گسترش کمپین رزرو شده است.</p>
+                <div class="chart-container h-64 md:h-auto">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <h2 class="text-2xl font-bold mb-2 text-center text-[#004AAD]">اقدامات کلیدی تیم سئو و محتوا (۳ هفته)</h2>
+            <p class="text-gray-600 mb-8 text-center">پایه‌ریزی یک زیرساخت قوی برای رشد ارگانیک و بلندمدت وب‌سایت.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 bg-slate-100 rounded-lg">
+                    <div class="text-4xl mb-2">🔍</div>
+                    <h4 class="font-bold">تحقیقات کلمات کلیدی</h4>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg">
+                    <div class="text-4xl mb-2">📄</div>
+                    <h4 class="font-bold">تولید محتوا برای ۱۰ صفحه</h4>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg">
+                    <div class="text-4xl mb-2">📈</div>
+                    <h4 class="font-bold">پیاده‌سازی سئو داخلی</h4>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg">
+                    <div class="text-4xl mb-2">➕</div>
+                    <h4 class="font-bold">افزودن ۷ صفحه جدید</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12">
+            <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-[#004AAD]">تحلیل و نمره عملکرد (امتیاز: ۸۳ از ۱۰۰)</h2>
+                <p class="text-gray-600 mb-6">امتیاز نهایی بر اساس ۵ شاخص کلیدی ارزیابی شده که نشان‌دهنده عملکردی فراتر از انتظار در فاز اولیه است.</p>
+                <div class="chart-container h-72 md:h-auto">
+                    <canvas id="performanceScoreChart"></canvas>
+                </div>
+            </div>
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-[#004AAD]">تولید محتوا و آموزش</h2>
+                 <p class="text-gray-600 mb-6">علاوه بر زیرساخت فنی، بر روی توانمندسازی تیم و تولید محتوای خلاقانه نیز تمرکز ویژه‌ای صورت گرفت.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <span class="text-3xl ml-4">🎬</span>
+                        <div>
+                            <h4 class="font-bold">۸ ریلز اینستاگرامی</h4>
+                            <p class="text-sm text-gray-500">تولید و بارگذاری برای افزایش تعامل</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl ml-4">🎨</span>
+                        <div>
+                            <h4 class="font-bold">۶ جلسه طراحی بنر</h4>
+                            <p class="text-sm text-gray-500">برای کمپین‌های تبلیغاتی و محتوای پیج</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl ml-4">🎓</span>
+                        <div>
+                            <h4 class="font-bold">۴ جلسه آموزش تیم</h4>
+                            <p class="text-sm text-gray-500">برای ارتقاء مهارت تولید محتوا</p>
+                        </div>
+                    </li>
+                     <li class="flex items-center">
+                        <span class="text-3xl ml-4">🤝</span>
+                        <div>
+                            <h4 class="font-bold">۱ جلسه استراتژی محتوا</h4>
+                            <p class="text-sm text-gray-500">برای تعیین مسیر محتوایی در دفتر مرکزی</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="bg-gradient-to-r from-[#004AAD] to-[#009FFD] text-white rounded-lg shadow-xl p-8 text-center">
+            <h2 class="text-3xl font-extrabold mb-4">فرصت سرمایه‌گذاری برای فاز دوم</h2>
+            <p class="text-lg mb-6 max-w-3xl mx-auto">با توجه به موفقیت فاز اول و اثبات کارایی مدل، پیشنهاد می‌شود مبلغ <span class="font-bold text-yellow-300">۵۰ تا ۸۰ میلیون تومان</span> برای گسترش کمپین‌ها، توسعه لندینگ‌های تخصصی و تبدیل لیدهای فعلی به مشتریان قطعی، سرمایه‌گذاری شود.</p>
+            <button class="bg-white text-[#004AAD] font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-colors">بررسی طرح توسعه</button>
+        </section>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const budgetData = {
+            labels: ['هزینه شده', 'رزرو شده', 'باقی‌مانده از بودجه تبلیغات'],
+            datasets: [{
+                label: 'وضعیت بودجه',
+                data: [2800000, 12000000, (10000000 - 2800000)],
+                backgroundColor: ['#009FFD', '#24CCFF', '#A3DFFF'],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        };
+        const budgetConfig = {
+            type: 'doughnut',
+            data: budgetData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                           font: {
+                                family: "'Vazirmatn', sans-serif",
+                                size: 14,
+                           }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += new Intl.NumberFormat('fa-IR').format(context.parsed) + ' تومان';
+                                }
+                                return label;
+                            }
+                        },
+                        bodyFont: {
+                            family: "'Vazirmatn', sans-serif"
+                        },
+                        titleFont: {
+                            family: "'Vazirmatn', sans-serif"
+                        }
+                    }
+                }
+            }
+        };
+        new Chart(document.getElementById('budgetChart'), budgetConfig);
+
+        const performanceData = {
+            labels: ['سرعت اجرا', 'مدیریت مالی', 'کیفیت محتوا', 'جذب لید', 'هماهنگی تیمی'],
+            datasets: [{
+                label: 'امتیاز',
+                data: [20, 18, 17, 15, 13],
+                backgroundColor: ['#004AAD', '#009FFD', '#24CCFF', '#A3DFFF', '#E0F7FF'],
+                borderColor: '#ffffff',
+                borderWidth: 1,
+                maxBarThickness: 30,
+            }]
+        };
+        const performanceConfig = {
+            type: 'bar',
+            data: performanceData,
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 20,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                           font: {
+                                family: "'Vazirmatn', sans-serif",
+                           }
+                        }
+                    },
+                    y: {
+                         ticks: {
+                           font: {
+                                family: "'Vazirmatn', sans-serif",
+                                size: 14,
+                           }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback,
+                           label: function(context) {
+                                return `امتیاز: ${context.parsed.x} از 20`;
+                           }
+                        },
+                        bodyFont: {
+                            family: "'Vazirmatn', sans-serif"
+                        },
+                        titleFont: {
+                            family: "'Vazirmatn', sans-serif"
+                        }
+                    }
+                }
+            }
+        };
+        new Chart(document.getElementById('performanceScoreChart'), performanceConfig);
+    </script>
+</body>
+</html>
